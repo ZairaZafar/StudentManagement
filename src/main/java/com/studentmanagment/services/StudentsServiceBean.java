@@ -1,36 +1,37 @@
 package com.studentmanagment.services;
 
-import com.studentmanagment.managers.StudentManager;
+import com.studentmanagment.dao.StudentDaoInterface;
 import com.studentmanagment.models.Students;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.List;
-import static java.lang.Integer.parseInt;
 
 @Local(StudentService.class)
 @Stateless
 public class StudentsServiceBean implements StudentService {
 
-    private StudentManager studentManager = new StudentManager();
+    @Inject
+    private StudentDaoInterface studentDaoInterface;
 
-    public Students getStudent(String id) {
-        return studentManager.getStudent(parseInt(id));
+    public Students getStudent(Integer id) {
+        return studentDaoInterface.findById(id);
     }
 
-    public List getAllStudents() {
-        return studentManager.listStudents();
+    public List getAllStudents() { return studentDaoInterface.getAllStudents();
     }
 
-    public void updateAge(String id, int age) {
-        studentManager.updateStudent(parseInt(id), age);
+    public void updateAge(Students student) {
+        studentDaoInterface.merge(student);
     }
 
-    public void deleteStudent(int id) {
-        studentManager.deleteStudent(id);
+    public void deleteStudent(Students student) {
+        student = studentDaoInterface.findById(student.getId());
+        studentDaoInterface.delete(student);
     }
 
-    public void addStudent(String name, int age) {
-        studentManager.addStudent(name, age);
+    public void addStudent(Students student) {
+        studentDaoInterface.save(student);
     }
 }

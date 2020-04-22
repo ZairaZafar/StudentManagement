@@ -1,22 +1,9 @@
 package com.studentmanagment.configurations;
 
-import com.studentmanagment.controllers.StudentsController;
-
-import java.util.HashSet;
-import java.util.Set;
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+@ApplicationPath("/rest")
 public class RestConfiguration extends Application{
 
-
-    private Set<Object> singletons = new HashSet<Object>();
-
-    public RestConfiguration() {
-        singletons.add(new StudentsController());
-    }
-
-    @Override
-    public Set<Object> getSingletons() {
-        return singletons;
-    }
 }

@@ -922,311 +922,222 @@
     </collation>
     <table id="232" parent="2" name="chapters"/>
     <table id="233" parent="2" name="modules"/>
-    <table id="234" parent="2" name="student_chapters"/>
-    <table id="235" parent="2" name="student_modules"/>
-    <table id="236" parent="2" name="students"/>
-    <table id="237" parent="5" name="ar_internal_metadata"/>
-    <table id="238" parent="5" name="gps_points"/>
-    <table id="239" parent="5" name="schema_migrations"/>
-    <table id="240" parent="5" name="traces"/>
-    <column id="241" parent="232" name="id">
+    <table id="234" parent="2" name="students"/>
+    <table id="235" parent="5" name="ar_internal_metadata"/>
+    <table id="236" parent="5" name="gps_points"/>
+    <table id="237" parent="5" name="schema_migrations"/>
+    <table id="238" parent="5" name="traces"/>
+    <column id="239" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="232" name="name">
+    <column id="240" parent="232" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="232" name="total_pages">
+    <column id="241" parent="232" name="total_pages">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="232" name="module_id">
+    <column id="242" parent="232" name="module_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="245" parent="232" name="module_id">
+    <index id="243" parent="232" name="module_id">
       <ColNames>module_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="246" parent="232" name="PRIMARY">
+    <key id="244" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="247" parent="232" name="chapters_ibfk_1">
-      <ColNames>module_id</ColNames>
-      <RefTableName>modules</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="248" parent="233" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="249" parent="233" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="250" parent="233" name="total_chapters">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="251" parent="233" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="252" parent="234" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="253" parent="234" name="student_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="254" parent="234" name="chapter_id">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="255" parent="234" name="pages_completed">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="256" parent="234" name="student_id">
-      <ColNames>student_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="257" parent="234" name="chapter_id">
-      <ColNames>chapter_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="258" parent="234" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="259" parent="234" name="student_chapters_ibfk_1">
-      <ColNames>student_id</ColNames>
-      <RefTableName>students</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="260" parent="234" name="student_chapters_ibfk_2">
-      <ColNames>chapter_id</ColNames>
-      <RefTableName>chapters</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="261" parent="235" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="235" name="student_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="263" parent="235" name="module_id">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="264" parent="235" name="student_id">
-      <ColNames>student_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="265" parent="235" name="module_id">
-      <ColNames>module_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="266" parent="235" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="267" parent="235" name="student_modules_ibfk_2">
-      <ColNames>student_id</ColNames>
-      <RefTableName>students</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="268" parent="235" name="student_modules_ibfk_1">
+    <foreign-key id="245" parent="232" name="chapters_ibfk_1">
       <ColNames>module_id</ColNames>
       <RefTableName>modules</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="269" parent="236" name="id">
+    <column id="246" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="236" name="name">
+    <column id="247" parent="233" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="236" name="age">
+    <column id="248" parent="233" name="total_chapters">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="272" parent="236" name="PRIMARY">
+    <key id="249" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="273" parent="237" name="key">
+    <column id="250" parent="234" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="234" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="234" name="age">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="253" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="254" parent="235" name="key">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="237" name="value">
+    <column id="255" parent="235" name="value">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="237" name="created_at">
+    <column id="256" parent="235" name="created_at">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="237" name="updated_at">
+    <column id="257" parent="235" name="updated_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="277" parent="237" name="PRIMARY">
+    <key id="258" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="278" parent="238" name="id">
+    <column id="259" parent="236" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="238" name="longitude">
+    <column id="260" parent="236" name="longitude">
       <Position>2</Position>
       <DataType>decimal(16,13 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="238" name="latitude">
+    <column id="261" parent="236" name="latitude">
       <Position>3</Position>
       <DataType>decimal(16,13 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="238" name="trace_id">
+    <column id="262" parent="236" name="trace_id">
       <Position>4</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="238" name="created_at">
+    <column id="263" parent="236" name="created_at">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="238" name="updated_at">
+    <column id="264" parent="236" name="updated_at">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="284" parent="238" name="index_gps_points_on_trace_id">
+    <index id="265" parent="236" name="index_gps_points_on_trace_id">
       <ColNames>trace_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="285" parent="238" name="PRIMARY">
+    <key id="266" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="286" parent="238" name="fk_rails_c9f8144c51">
+    <foreign-key id="267" parent="236" name="fk_rails_c9f8144c51">
       <ColNames>trace_id</ColNames>
       <RefTableName>traces</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="287" parent="239" name="version">
+    <column id="268" parent="237" name="version">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="288" parent="239" name="PRIMARY">
+    <key id="269" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="289" parent="240" name="id">
+    <column id="270" parent="238" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="240" name="name">
+    <column id="271" parent="238" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="240" name="created_at">
+    <column id="272" parent="238" name="created_at">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="240" name="updated_at">
+    <column id="273" parent="238" name="updated_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="293" parent="240" name="index_traces_on_name">
+    <index id="274" parent="238" name="index_traces_on_name">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="294" parent="240" name="PRIMARY">
+    <key id="275" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="295" parent="240" name="index_traces_on_name">
+    <key id="276" parent="238" name="index_traces_on_name">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>index_traces_on_name</UnderlyingIndexName>
     </key>

@@ -1,7 +1,10 @@
+/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/dao/StudentDaoInterface.java
 /Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/models/Students.java
 /Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/services/StudentService.java
+/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/dao/BaseDao.java
 /Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/controllers/StudentsController.java
-/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/managers/HibernateManager.java
-/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/managers/StudentManager.java
+/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/dao/impl/StudentDao.java
+/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/models/BaseEntity.java
+/Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/dao/DAOInterface.java
 /Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/services/StudentsServiceBean.java
 /Users/Intern/IdeaProjects/StudentManagement/src/main/java/com/studentmanagment/configurations/RestConfiguration.java
