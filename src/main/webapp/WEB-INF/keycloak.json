@@ -1,0 +1,10 @@
+{
+  "realm": "StudentManagementCloak",
+  "auth-server-url": "http://localhost:8180/auth/",
+  "ssl-required": "none",
+  "resource": "login-app",
+  "credentials": {
+    "secret": "c5728202-9fa6-4d08-b695-db56cf34ff3b"
+  },
+  "confidential-port": 0
+}
